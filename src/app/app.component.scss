@@ -1,0 +1,8 @@
+.mat-sidenav, .mat-sidenav-content {
+    padding: 24px;
+}
+
+.router-container {
+    height: calc(100vh - 112px); // 48 padding + 64 toolbar
+    width: 100%;
+}
