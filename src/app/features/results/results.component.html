@@ -4,7 +4,7 @@
   </div>
   
   <div *ngIf="!isLoading" class="parent">
-    {{results | json}}
+    <app-results-chart [results]="results"></app-results-chart>
   </div>
 </div>
 

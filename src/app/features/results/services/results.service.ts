@@ -19,19 +19,29 @@ export class ResultsService {
 
   matchResults: MatchResult[] = [
     {
-        name: 'Wynik 1',
+        name: 'Informatyka',
         percentageMatch: 95.5,
         managingInstitutions: ['Instytucja A', 'Instytucja B']
     },
     {
-        name: 'Wynik 2',
+        name: 'Matematyka',
         percentageMatch: 88,
         managingInstitutions: ['Instytucja C']
     },
     {
-        name: 'Wynik 3',
+        name: 'Biologia',
         percentageMatch: 76,
         managingInstitutions: ['Instytucja D', 'Instytucja E', 'Instytucja F']
+    },
+    {
+        name: 'Angielski',
+        percentageMatch: 34,
+        managingInstitutions: ['Instytucja E', 'Instytucja F']
+    },
+    {
+        name: 'Niemiecki',
+        percentageMatch: 12,
+        managingInstitutions: ['Instytucja F']
     }
 ];
 
