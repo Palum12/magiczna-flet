@@ -25,8 +25,11 @@
 .answer-card{
     width: calc(50% - 0.125rem);
     height: 20vh;
+    :hover {
+        cursor: pointer;
+    }
 }
 
-.answer-container:hover {
-    cursor: pointer;
+.answer-container {
+    width: 100%;
 }
