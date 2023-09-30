@@ -5,6 +5,7 @@ import { Result } from './models/results';
 
 @Component({
   selector: 'app-results',
+  styleUrls: ['./results.component.scss'],
   templateUrl: './results.component.html'
 })
 export class ResultsComponent implements OnInit {
