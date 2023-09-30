@@ -1,1 +1,14 @@
-<p>questionnaire works!</p>
+<div class="questionnaire-container">
+    <div *ngIf="loading">
+        <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </div>
+    
+    <div *ngIf="!loading">
+      <div *ngFor="let question of questionnaire?.questions; let i = index">
+        <div *ngIf="i === currentQuestionIndex" [@slideInOut]='i'>
+    
+        </div>
+      </div>
+    </div>
+</div>
+
