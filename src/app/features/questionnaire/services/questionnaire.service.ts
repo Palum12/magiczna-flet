@@ -31,7 +31,7 @@ export class QuestionnaireService {
      }
    });
 
-   const result = <QuestionnaireAnswers> {questionnaireAnswers: questionnaireAnswers};
+   const result = <QuestionnaireAnswers> {answers: questionnaireAnswers};
    return result;
   }
 

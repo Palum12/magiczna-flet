@@ -1,5 +1,5 @@
 export interface QuestionnaireAnswers {
-    questionnaireAnswers: QuestionnaireAnswer[];
+    answers: QuestionnaireAnswer[];
 }
 
 export interface QuestionnaireAnswer {
