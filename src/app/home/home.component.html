@@ -1,19 +1,17 @@
 <div class="cards-conatiner">
     <div class="w-full flex flex-col justify-center items-center gap-4">
-        <mat-card class="card">
-            <mat-card-content>
-                <h2>Witaj na naszej stronie mającej na celu pomóc Ci wybrać studia.</h2>
+        <div class="p-3">
+            <h2>Witaj na naszej stronie mającej na celu pomóc Ci wybrać studia.</h2>
                 <h3 class="mt-2">
                     Dzięki potędze sztucznej inteligencji będziemy mogli podpowiedzić Ci idealny kierunek studiów.
                     Nie ma znaczenia czy właśnie zdałeś maturę czy marzysz o zmianie pracy, nasza strona jest dla Ciebie.
                 </h3>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="card link-card" routerLink="/questionnaire">
-            <mat-card-content>
-                <h2>Kliknij tutaj aby dowiedzieć się jakie studia są najlepsze dla Ciebie!</h2>
-            </mat-card-content>
-        </mat-card>
+        </div>
+        <button class="mb-3" mat-raised-button color="primary" routerLink="/questionnaire">
+            <span class="text-16">
+                Zaczynajmy!
+            </span>
+        </button>
     </div>
 </div>
 
