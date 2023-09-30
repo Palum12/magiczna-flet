@@ -26,7 +26,7 @@ export class QuestionnaireService {
     const questionnaireAnswers = questionnaire.questions.map(q => {
      return <QuestionnaireAnswer> {
        questionId: q.id,
-       answearId: q.answers.find(x => x.isChecked)?.id
+       answerId: q.answers.find(x => x.isChecked)?.id
      }
    });
 

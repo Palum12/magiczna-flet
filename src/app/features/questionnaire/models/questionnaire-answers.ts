@@ -4,5 +4,5 @@ export interface QuestionnaireAnswers {
 
 export interface QuestionnaireAnswer {
     questionId: number;
-    answearId: number;
+    answerId: number;
 }
