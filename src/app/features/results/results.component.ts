@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ResultsService } from './services/results.service';
 import { ActivatedRoute } from '@angular/router';
-import { MatchResult } from './models/results';
+import { Result } from './models/results';
 
 @Component({
   selector: 'app-results',
   templateUrl: './results.component.html'
 })
 export class ResultsComponent implements OnInit {
-  public results!: MatchResult[];
+  public result!: Result;
   public isLoading = true;
   public resultsCount = 0;
   public mostPopularDiscipline = '';
@@ -20,7 +20,7 @@ export class ResultsComponent implements OnInit {
     const id = this.route.snapshot.params['id'];
     this.resultsService.getResults(id)
       .subscribe(x => {
-        this.results = x;
+        this.result = x;
         this.isLoading = false;
       });
   }

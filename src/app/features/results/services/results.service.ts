@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MatchResult } from '../models/results';
+import { MatchResult, Result } from '../models/results';
 import { HttpClient } from '@angular/common/http';
 import { Observable, delay, of } from 'rxjs';
 
@@ -12,10 +12,12 @@ export class ResultsService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getResults(questionnaireId: number): Observable<MatchResult[]> {
+  public getResults(questionnaireId: number): Observable<Result> {
     //return this.httpClient.get<Results>(this.baseUrl + `/GetResults/${questionnaireId}`);
-    return of(this.matchResults).pipe(delay(100));
+    return of(this.result).pipe(delay(100));
   }
+
+
 
   matchResults: MatchResult[] = [
     {
@@ -44,5 +46,11 @@ export class ResultsService {
         managingInstitutions: ['Instytucja F']
     }
 ];
+
+result: Result = {
+  id: 0,
+  fieldOfStudyProposals: this.matchResults,
+  expertDescription: 'test'
+}
 
 }
