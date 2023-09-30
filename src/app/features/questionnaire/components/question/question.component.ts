@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Answer, Question } from '../../models/questionnaire';
+import { Question } from '../../models/questionnaire';
 
 @Component({
   selector: 'app-question',
@@ -8,10 +8,9 @@ import { Answer, Question } from '../../models/questionnaire';
 })
 export class QuestionComponent {
   @Input() question!: Question;
-  @Output() answered = new EventEmitter<void>();
+  @Output() answered = new EventEmitter<boolean>();
 
-  public answerClick(answer: Answer): void {
-    answer.isChecked = true;
-    this.answered.emit();
+  public answerClick(answer: boolean): void {
+    this.answered.emit(answer);
   }
 }

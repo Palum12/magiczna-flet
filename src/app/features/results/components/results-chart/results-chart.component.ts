@@ -11,7 +11,7 @@ export class ResultsChartComponent implements OnInit {
   @Input() results!: MatchResult[];
 
   public radarChartOptions: ChartConfiguration<'radar'>['options'] = {
-    responsive: false,
+    responsive: true
   };
   public radarChartLabels!: string[];
 

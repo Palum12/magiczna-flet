@@ -1,10 +1,8 @@
-<mat-card class="card">
-    <div>
-        <canvas baseChart
-                [datasets]="radarChartData"
-                [labels]="radarChartLabels"
-                [options]="radarChartOptions"
-                [type]="'radar'">
-        </canvas>
-      </div>
+<mat-card class="card flex justify-center items-center">
+    <canvas baseChart class="chart"
+        [datasets]="radarChartData"
+        [labels]="radarChartLabels"
+        [options]="radarChartOptions"
+        [type]="'radar'">
+    </canvas>
 </mat-card>
