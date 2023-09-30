@@ -1,1 +1,21 @@
-<p>results works!</p>
+<div class="p-4">
+  <h1 class="text-2xl font-bold">Wyniki Testu Profilującego</h1>
+
+  <div>{{results!.expertDescription}}</div>
+
+  <div>Liczba pasujących do Ciebie kierunków: {{ resultsCount }}</div>
+  <div>Najbardziej wymagany przedmiot na maturze: {{ mostPopularDiscipline }}</div>
+
+  <div *ngFor="let result of results.fieldOfStudyProposals" class="my-4 p-4 border border-gray-300 rounded">
+    <h2 class="text-xl font-semibold">{{ result.name }}</h2>
+    <p>Institution: {{ result.managingInstitution }}</p>
+    <p>Level: {{ result.level }}</p>
+    <p>Professional Title: {{ result.launchProfessionalTitle }}</p>
+    <p>Language of Education: {{ result.launchLanguageofEducation }}</p>
+
+    <h3 class="text-lg font-semibold mt-2">Disciplines:</h3>
+    <ul>
+      <li *ngFor="let discipline of result.disciplines">{{ discipline }}</li>
+    </ul>
+  </div>
+</div>
