@@ -5,3 +5,17 @@
     background-size: cover;
     opacity: 0.5;
 }
+
+.logo-container {
+    height: 20vh;
+    width: 100vw;
+}
+
+.logo {
+    height: 20vh;
+    width: 20vh;
+    background-image: url("/assets/logo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
