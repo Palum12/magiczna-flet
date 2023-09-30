@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
     trigger('slideIn', [
       transition(':leave', [
         style({ transform: 'translateX(0%)' }),
-        animate('500ms ease', style({ transform: 'translateX(-100%)' }))
+        animate('500ms ease', style({ transform: 'translateX(-100%)', opacity:0 }))
       ]),
       transition(':enter', [
         style({ transform: 'translateX(100%)' }),
@@ -40,7 +40,6 @@ export class QuestionnaireComponent {
   nextQuestion(index: number, value: boolean) {
     this.questionnaire.questions[index].answer = value;
     if (index === this.questionnaire.questions.length - 1) {
-      console.log('test');
       this.loading = true;
       this.questionnaireService.sendFilledQuestionnaire(this.questionnaire)
       .subscribe((x) => {
