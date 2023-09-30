@@ -3,8 +3,12 @@
       <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
   </div>
   
-  <div *ngIf="!isLoading" class="parent">
+  <div *ngIf="!isLoading" class="parent flex flex-col justify-center items-center gap-2">
     <app-results-chart [results]="result.fieldOfStudyProposals"></app-results-chart>
+    <mat-card class="m-6">
+      <mat-card-header><h2>Krótkie podsumowanie od sztucznej inteligencji</h2></mat-card-header>
+      <mat-card-content>{{result.expertDescription}}</mat-card-content>
+    </mat-card>
   </div>
 </div>
 
