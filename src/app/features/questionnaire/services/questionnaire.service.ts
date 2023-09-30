@@ -9,25 +9,30 @@ import { QuestionnaireAnswer, QuestionnaireAnswers } from '../models/questionnai
 })
 export class QuestionnaireService {
 
-  private baseUrl = 'http://aaa.pl'
+  private baseUrl = 'https://magiczna-flet-api.azurewebsites.net'
 
   constructor(private httpClient: HttpClient) { }
 
   public getQuestionnaire(): Observable<Questionnaire> {
-    //return this.httpClient.get<Questionnaire>(this.baseUrl + '/questionnaire');
+    //return this.httpClient.get<Questionnaire>(this.baseUrl + '/api/Quiz/GetQuizQuestions);
     return of(this.questionnaire).pipe(delay(100));
   }
 
   public sendFilledQuestionnaire(questionnaire: Questionnaire): Observable<void> {
     const body = this.mapQuestionnaireToAnswers(questionnaire);
-    return this.httpClient.post<void>(this.baseUrl + '/questionnaire', body);
+    return this.httpClient.post<void>(this.baseUrl + '/api/Quiz/PostQuizResults', body);
   }
 
   private mapQuestionnaireToAnswers(questionnaire: Questionnaire): QuestionnaireAnswers {
-    const questionnaireAnswers: QuestionnaireAnswer[] = [];
-    const result = <QuestionnaireAnswers> {questionnaireAnswers: questionnaireAnswers};
+    const questionnaireAnswers = questionnaire.questions.map(q => {
+     return <QuestionnaireAnswer> {
+       questionId: q.id,
+       answearId: q.answers.find(x => x.isChecked)?.id
+     }
+   });
 
-    return result;
+   const result = <QuestionnaireAnswers> {questionnaireAnswers: questionnaireAnswers};
+   return result;
   }
 
 
