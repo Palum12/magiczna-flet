@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { QuestionnaireService } from './services/questionnaire.service';
 import { Questionnaire } from './models/questionnaire';
 import { trigger, transition, style, animate, group, query, animateChild } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-questionnaire',
@@ -26,7 +27,10 @@ export class QuestionnaireComponent {
   public currentQuestionIndex: number = 0;
   public loading = true;
 
-  constructor(private questionnaireService: QuestionnaireService) {
+  constructor(
+    private questionnaireService: QuestionnaireService,
+    private router: Router
+    ) {
     this.questionnaireService.getQuestionnaire().subscribe(data => {
       this.questionnaire = data;
       this.loading = false;
@@ -35,7 +39,11 @@ export class QuestionnaireComponent {
 
   nextQuestion(index: number) {
     if (index === this.questionnaire.questions.length - 1) {
-      console.log('koniec');
+      this.questionnaireService.sendFilledQuestionnaire(this.questionnaire)
+      .subscribe(() => {
+        success: () => this.router.navigateByUrl(`results/${this.questionnaire.id}`)
+        error: () => alert('ups');
+      });
     } else {
       this.currentQuestionIndex++;
     }
