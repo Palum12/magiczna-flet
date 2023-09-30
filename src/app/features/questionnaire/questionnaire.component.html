@@ -1,5 +1,5 @@
 <div class="questionnaire-container">
-    <div *ngIf="loading">
+    <div class="w-full h-full flex justify-center items-center" *ngIf="loading">
         <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
     </div>
     
@@ -9,7 +9,7 @@
             <app-question
               *ngIf="i === currentQuestionIndex"
               [question]="question"
-              (answered)="nextQuestion(i)">
+              (answered)="nextQuestion(i, $event)">
             </app-question>
           </div>
         </ng-container>

@@ -37,13 +37,16 @@ export class QuestionnaireComponent {
     });
   }
 
-  nextQuestion(index: number) {
+  nextQuestion(index: number, value: boolean) {
+    this.questionnaire.questions[index].answer = value;
     if (index === this.questionnaire.questions.length - 1) {
+      console.log('test');
+      this.loading = true;
       this.questionnaireService.sendFilledQuestionnaire(this.questionnaire)
-      .subscribe(() => {
-        success: () => this.router.navigateByUrl(`results/${this.questionnaire.id}`)
-        error: () => alert('ups');
-      });
+      .subscribe((x) => {
+          this.loading = false;
+          this.router.navigateByUrl(`results/${x}`);
+        });
     } else {
       this.currentQuestionIndex++;
     }

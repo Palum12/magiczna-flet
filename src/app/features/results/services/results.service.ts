@@ -13,44 +13,7 @@ export class ResultsService {
   constructor(private httpClient: HttpClient) { }
 
   public getResults(questionnaireId: number): Observable<Result> {
-    //return this.httpClient.get<Results>(this.baseUrl + `/GetResults/${questionnaireId}`);
-    return of(this.result).pipe(delay(100));
+    return this.httpClient.get<Result>(this.baseUrl + `/api/Results/GetResults/${questionnaireId}`);
   }
-
-
-
-  matchResults: MatchResult[] = [
-    {
-        name: 'Informatyka',
-        percentageMatch: 95.5,
-        managingInstitutions: ['Instytucja A', 'Instytucja B']
-    },
-    {
-        name: 'Matematyka',
-        percentageMatch: 88,
-        managingInstitutions: ['Instytucja C']
-    },
-    {
-        name: 'Biologia',
-        percentageMatch: 76,
-        managingInstitutions: ['Instytucja D', 'Instytucja E', 'Instytucja F']
-    },
-    {
-        name: 'Angielski',
-        percentageMatch: 34,
-        managingInstitutions: ['Instytucja E', 'Instytucja F']
-    },
-    {
-        name: 'Niemiecki',
-        percentageMatch: 12,
-        managingInstitutions: ['Instytucja F']
-    }
-];
-
-result: Result = {
-  id: 0,
-  fieldOfStudyProposals: this.matchResults,
-  expertDescription: 'test'
-}
 
 }
