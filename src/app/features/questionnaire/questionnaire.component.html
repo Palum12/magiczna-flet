@@ -5,9 +5,12 @@
     
     <div *ngIf="!loading">
       <div *ngFor="let question of questionnaire?.questions; let i = index">
-        <div *ngIf="i === currentQuestionIndex" [@slideInOut]='i'>
-    
-        </div>
+        <app-question
+            *ngIf="i === currentQuestionIndex"
+            [@slideInOut]='i'
+            [question]="question"
+            (answered)="nextQuestion(i)">
+        </app-question>
       </div>
     </div>
 </div>

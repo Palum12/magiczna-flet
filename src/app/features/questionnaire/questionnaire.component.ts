@@ -32,8 +32,12 @@ export class QuestionnaireComponent {
     });
   }
 
-  nextQuestion() {
-    this.currentQuestionIndex++;
+  nextQuestion(index: number) {
+    if (index === this.questionnaire.questions.length) {
+      console.log('koniec');
+    } else {
+      this.currentQuestionIndex++;
+    }
   }
 
   previousQuestion() {

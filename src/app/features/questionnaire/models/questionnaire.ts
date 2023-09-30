@@ -1,15 +1,16 @@
 export interface Questionnaire {
+    id: number;
     questions: Question[];
 }
 
 export interface Question {
     id: number;
-    question: string;
+    value: string;
     answers: Answer[];
 }
 
 export interface Answer {
-    text: string;
+    value: string;
     id: number;
     isChecked: boolean;
 }
