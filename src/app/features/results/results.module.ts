@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgChartsModule } from 'ng2-charts';
 import { ResultsRoutingModule } from './results-routing.module';
 import { ResultsComponent } from './results.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { ResultsComponent } from './results.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     ResultsRoutingModule,
     NgChartsModule
   ]

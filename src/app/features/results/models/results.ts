@@ -1,15 +1,5 @@
-export interface Results {
-    id: string;
-    fieldOfStudyProposals: Result[];
-    expertDescription: string;
-}
-
-export interface Result {
-    id: string;
+export interface MatchResult {
     name: string;
-    managingInstitution: string;
-    level: string;
-    launchProfessionalTitle: string;
-    launchLanguageofEducation: string;
-    disciplines: string[];
+    percentageMatch: number;
+    managingInstitutions: string[];
 }
