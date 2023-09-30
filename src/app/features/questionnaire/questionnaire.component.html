@@ -3,15 +3,16 @@
         <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
     </div>
     
-    <div *ngIf="!loading">
-      <div *ngFor="let question of questionnaire?.questions; let i = index">
-        <app-question
-            *ngIf="i === currentQuestionIndex"
-            [@slideInOut]='i'
-            [question]="question"
-            (answered)="nextQuestion(i)">
-        </app-question>
-      </div>
+    <div *ngIf="!loading" class="parent">
+        <ng-container *ngFor="let question of questionnaire?.questions; let i = index">
+          <div class="child" *ngIf="i === currentQuestionIndex" [@slideIn]>
+            <app-question
+              *ngIf="i === currentQuestionIndex"
+              [question]="question"
+              (answered)="nextQuestion(i)">
+            </app-question>
+          </div>
+        </ng-container>
     </div>
 </div>
 

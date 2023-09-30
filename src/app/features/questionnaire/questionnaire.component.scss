@@ -2,8 +2,19 @@
     width: 100%;
     height: 100%;
     padding: 0 24px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.parent {
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+
+.child {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    display: flex;
+    justify-content: center;
 }

@@ -46,7 +46,7 @@ export class QuestionnaireService {
       },
       {
         "id": 2,
-        "question": "Co to jest studia zaoczne?",
+        "value": "Co to jest studia zaoczne?",
         "answers": [
           {"id": 1, "value": "Studia przez internet", "isChecked": false},
           {"id": 2, "value": "Studia wieczorowe", "isChecked": false},
@@ -56,7 +56,7 @@ export class QuestionnaireService {
       },
       {
         "id": 3,
-        "question": "Czy warto wybierać studia dwukierunkowe?",
+        "value": "Czy warto wybierać studia dwukierunkowe?",
         "answers": [
           {"id": 1, "value": "Tak, bo poszerzają horyzonty", "isChecked": false},
           {"id": 2, "value": "Nie, bo są zbyt trudne", "isChecked": false},
@@ -66,7 +66,7 @@ export class QuestionnaireService {
       },
       {
         "id": 4,
-        "question": "Czy warto rozważyć studia za granicą?",
+        "value": "Czy warto rozważyć studia za granicą?",
         "answers": [
           {"id": 1, "value": "Tak, bo pozwalają na poznawanie świata", "isChecked": false},
           {"id": 2, "value": "Nie, bo są zbyt drogie", "isChecked": false},
@@ -76,7 +76,7 @@ export class QuestionnaireService {
       },
       {
         "id": 5,
-        "question": "Jak znaleźć uczelnię, która najbardziej Ci odpowiada?",
+        "value": "Jak znaleźć uczelnię, która najbardziej Ci odpowiada?",
         "answers": [
           {"id": 1, "value": "Przeczytać opinie w internecie", "isChecked": false},
           {"id": 2, "value": "Odwiedzić dni otwarte uczelni", "isChecked": false},
@@ -86,7 +86,7 @@ export class QuestionnaireService {
       },
       {
         "id": 6,
-        "question": "Czy warto studiować na prywatnej uczelni?",
+        "value": "Czy warto studiować na prywatnej uczelni?",
         "answers": [
           {"id": 1, "value": "Tak, bo są lepiej wyposażone", "isChecked": false},
           {"id": 2, "value": "Nie, bo są zbyt drogie", "isChecked": false},
@@ -96,7 +96,7 @@ export class QuestionnaireService {
       },
       {
         "id": 7,
-        "question": "Czy warto studiować dwa kierunki jednocześnie?",
+        "value": "Czy warto studiować dwa kierunki jednocześnie?",
         "answers": [
           {"id": 1, "value": "Tak, bo to zwiększa wiedzę i umiejętności", "isChecked": false},
           {"id": 2, "value": "Nie, bo to zbyt męczące", "isChecked": false},
@@ -106,7 +106,7 @@ export class QuestionnaireService {
       },
       {
         "id": 8,
-        "question": "Czy warto zwracać uwagę na rankingi uczelni?",
+        "value": "Czy warto zwracać uwagę na rankingi uczelni?",
         "answers": [
           {"id": 1, "value": "Tak, bo to ważne źródło informacji", "isChecked": false},
           {"id": 2, "value": "Nie, bo są subiektywne", "isChecked": false},
@@ -116,7 +116,7 @@ export class QuestionnaireService {
       },
       {
         "id": 9,
-        "question": "Czy warto brać pod uwagę opinię rodziny i znajomych przy wyborze studiów?",
+        "value": "Czy warto brać pod uwagę opinię rodziny i znajomych przy wyborze studiów?",
         "answers": [
           {"id": 1, "value": "Tak, bo znają Cię najlepiej", "isChecked": false},
           {"id": 2, "value": "Nie, bo to Twoja decyzja", "isChecked": false},
@@ -126,7 +126,7 @@ export class QuestionnaireService {
       },
       {
         "id": 10,
-        "question": "Jaką formę studiów warto wybrać?",
+        "value": "Jaką formę studiów warto wybrać?",
         "answers": [
           {"id": 1, "value": "Stacjonarne", "isChecked": false},
           {"id": 2, "value": "Zaoczne", "isChecked": false},
@@ -136,7 +136,7 @@ export class QuestionnaireService {
       },
       {
         "id": 11,
-        "question": "Czy wybór studiów powinien zależeć od możliwości finansowych?",
+        "value": "Czy wybór studiów powinien zależeć od możliwości finansowych?",
         "answers": [
           {"id": 1, "value": "Tak, to ważny czynnik", "isChecked": false},
           {"id": 2, "value": "Nie, zawsze można znaleźć źródło finansowania", "isChecked": false},
@@ -146,7 +146,7 @@ export class QuestionnaireService {
       },
       {
         "id": 12,
-        "question": "Czy warto wybrać studia, które zapewniają staż czy praktyki?",
+        "value": "Czy warto wybrać studia, które zapewniają staż czy praktyki?",
         "answers": [
           {"id": 1, "value": "Tak, bo to ważne doświadczenie", "isChecked": false},
           {"id": 2, "value": "Nie, bo to nie zawsze się opłaca", "isChecked": false},
@@ -156,7 +156,7 @@ export class QuestionnaireService {
       },
       {
         "id": 13,
-        "question": "Czy wybór uczelni powinien zależeć od lokalizacji?",
+        "value": "Czy wybór uczelni powinien zależeć od lokalizacji?",
         "answers": [
           {"id": 1, "value": "Tak, bo to wpływa na komfort życia", "isChecked": false},
           {"id": 2, "value": "Nie, bo to nieistotne", "isChecked": false},
@@ -166,7 +166,7 @@ export class QuestionnaireService {
       },
       {
         "id": 14,
-        "question": "Czy warto wybrać uczelnię z dobrą opinią?",
+        "value": "Czy warto wybrać uczelnię z dobrą opinią?",
         "answers": [
           {"id": 1, "value": "Tak, bo to ważne", "isChecked": false},
           {"id": 2, "value": "Nie, bo opinie są subiektywne", "isChecked": false},
@@ -176,7 +176,7 @@ export class QuestionnaireService {
       },
       {
         "id": 15,
-        "question": "Czy warto zwracać uwagę na ofertę pozalekcyjną uczelni?",
+        "value": "Czy warto zwracać uwagę na ofertę pozalekcyjną uczelni?",
         "answers": [
           {"id": 1, "value": "Tak, bo to ważne dla rozwoju osobistego", "isChecked": false},
           {"id": 2, "value": "Nie, bo to nieistotne", "isChecked": false},
@@ -186,7 +186,7 @@ export class QuestionnaireService {
       },
       {
         "id": 16,
-        "question": "Czy warto wybrać studia na podstawie popularności kierunku?",
+        "value": "Czy warto wybrać studia na podstawie popularności kierunku?",
         "answers": [
           {"id": 1, "value": "Tak, bo to gwarantuje pracę", "isChecked": false},
           {"id": 2, "value": "Nie, bo to nie zawsze się opłaca", "isChecked": false},
@@ -196,7 +196,7 @@ export class QuestionnaireService {
       },
       {
         "id": 17,
-        "question": "Czy warto wybrać studia na podstawie progów punktowych?",
+        "value": "Czy warto wybrać studia na podstawie progów punktowych?",
         "answers": [
           {"id": 1, "value": "Tak, bo to wskazuje na prestiż", "isChecked": false},
           {"id": 2, "value": "Nie, bo to nie zawsze jest miarodajne", "isChecked": false},
@@ -206,7 +206,7 @@ export class QuestionnaireService {
       },
       {
         "id": 18,
-        "question": "Czy warto wybrać studia, na które trzeba się przeprowadzić?",
+        "value": "Czy warto wybrać studia, na które trzeba się przeprowadzić?",
         "answers": [
           {"id": 1, "value": "Tak, bo to nowe doświadczenie", "isChecked": false},
           {"id": 2, "value": "Nie, bo to duży koszt", "isChecked": false},
@@ -216,7 +216,7 @@ export class QuestionnaireService {
       },
       {
         "id": 19,
-        "question": "Czy warto wybrać studia, które są trudne do ukończenia?",
+        "value": "Czy warto wybrać studia, które są trudne do ukończenia?",
         "answers": [
           {"id": 1, "value": "Tak, bo to wyzwanie", "isChecked": false},
           {"id": 2, "value": "Nie, bo to stresujące", "isChecked": false},
@@ -226,7 +226,7 @@ export class QuestionnaireService {
       },
       {
         "id": 20,
-        "question": "Czy warto wybrać studia, na których jest dużo matematyki?",
+        "value": "Czy warto wybrać studia, na których jest dużo matematyki?",
         "answers": [
           {"id": 1, "value": "Tak, bo to rozwija umysł", "isChecked": false},
           {"id": 2, "value": "Nie, bo to trudne", "isChecked": false},

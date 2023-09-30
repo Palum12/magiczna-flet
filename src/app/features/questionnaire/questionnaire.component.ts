@@ -1,20 +1,21 @@
 import { Component } from '@angular/core';
 import { QuestionnaireService } from './services/questionnaire.service';
 import { Questionnaire } from './models/questionnaire';
-import { trigger, transition, style, animate } from '@angular/animations';
+import { trigger, transition, style, animate, group, query, animateChild } from '@angular/animations';
 
 @Component({
   selector: 'app-questionnaire',
   templateUrl: './questionnaire.component.html',
   styleUrls: ['./questionnaire.component.scss'],
   animations: [
-    trigger('slideInOut', [
-      transition(':enter', [
-        style({ transform: 'translateX(-100%)' }),
-        animate('200ms ease-in', style({ transform: 'translateX(0%)' }))
-      ]),
+    trigger('slideIn', [
       transition(':leave', [
-        animate('200ms ease-in', style({ transform: 'translateX(-100%)' }))
+        style({ transform: 'translateX(0%)' }),
+        animate('500ms ease', style({ transform: 'translateX(-100%)' }))
+      ]),
+      transition(':enter', [
+        style({ transform: 'translateX(100%)' }),
+        animate('500ms ease', style({ transform: 'translateX(0)' }))
       ])
     ])
   ]
@@ -33,7 +34,7 @@ export class QuestionnaireComponent {
   }
 
   nextQuestion(index: number) {
-    if (index === this.questionnaire.questions.length) {
+    if (index === this.questionnaire.questions.length - 1) {
       console.log('koniec');
     } else {
       this.currentQuestionIndex++;
