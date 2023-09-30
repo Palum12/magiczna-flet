@@ -4,8 +4,8 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: 'results', loadChildren: () => import('./features/results/results.module').then(m => m.ResultsModule) },
-  { path: 'questionnaire', loadChildren: () => import('./features/questionnaire/questionnaire.module').then(m => m.QuestionnaireModule) },
-  { path: '', component: HomeComponent }
+  { path: 'questionnaire', loadChildren: () => import('./features/questionnaire/questionnaire.module').then(m => m.QuestionnaireModule), data: { animation: 'QuestionnairePage' } },
+  { path: '', component: HomeComponent, data: { animation: 'HomePage' }}
 ];
 
 @NgModule({
