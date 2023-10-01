@@ -1,26 +1,43 @@
 <div class="questionnaire-container p-3">
   <div *ngIf="isLoading">
-      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
   </div>
-  
-  <div *ngIf="!isLoading" class="parent flex flex-col justify-center items-center gap-2">
-    <div class="card mb-3">
-      <div class="text-lg">Krótkie podsumowanie od sztucznej inteligencji</div>
-      <div class="text-base">
-        {{result.expertDescription}}
+
+  <div *ngIf="!isLoading">
+    <div class="parent flex flex-col justify-center items-center gap-2">
+      <div class="card mb-3">
+        <div class="text-lg">Krótkie podsumowanie od sztucznej inteligencji</div>
+        <div class="text-base">
+          {{result.expertDescription}}
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <app-results-chart [results]="result.fieldOfStudyProposals"></app-results-chart>
-    </div>
-    
-    <div class="accent flex flex-col items-center">
-      <div class="color-contrast text-center text-base mt-3">Wyniki są niezadowalające? Spróbuj ponownie.</div>
-      <button mat-fab color="primary" class="m-2" routerLink="/questionnaire">
+      <div class="card mb-3">
+        <app-results-chart [results]="result.fieldOfStudyProposals"></app-results-chart>
+      </div>
+
+      <div class="card mb-3">
+        <div class="text-lg mb-4">Propozycje kierunków studiów</div>
+        <div class="text-base">
+          <div *ngFor="let proposal of result.fieldOfStudyProposals" class="mb-8">
+            <div class="flex flex-row text-left mb-2">
+              <div class="font-bold">{{proposal.name}} - </div>
+              <div class="pl-1 font-bold">{{proposal.percentageMatch}}%</div>
+            </div>
+            <div *ngFor="let institution of proposal.managingInstitutions">
+              <div class="flex flex-row text-left">
+                <div>{{institution}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accent flex flex-col items-center">
+        <div class="color-contrast text-center text-base mt-3">Wyniki są niezadowalające? Spróbuj ponownie.</div>
+        <button mat-fab color="primary" class="m-2" routerLink="/questionnaire">
           <mat-icon>arrow_backward</mat-icon>
-      </button>
-  </div>
-  </div>
-</div>
+        </button>
+      </div>
 
+    </div>
