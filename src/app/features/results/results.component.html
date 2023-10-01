@@ -13,6 +13,14 @@
         </div>
 
         <div class="card mb-3">
+          <app-results-chart [results]="result.fieldOfStudyProposals"></app-results-chart>
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="card mb-3">
           <div class="text-lg mb-6">Krótkie podsumowanie od sztucznej inteligencji 🥳🎉</div>
           <div class="image">
             <img width="400" src="/assets/final.png" alt="">
@@ -21,12 +29,7 @@
             {{result.expertDescription}}
           </div>
         </div>
-      </div>
 
-      <div>
-        <div class="card mb-3">
-          <app-results-chart [results]="result.fieldOfStudyProposals"></app-results-chart>
-        </div>
   
         <div class="card mb-3">
           <div class="text-lg mb-4">Propozycje kierunków studiów</div>
@@ -44,12 +47,17 @@
             </div>
           </div>
         </div>
+
       </div>
+
+  
     </div>
+
     <div class="accent flex flex-col items-center">
       <div class="color-contrast text-center text-base mt-3">Wyniki są niezadowalające? Spróbuj ponownie.</div>
       <button mat-fab color="primary" class="m-2" routerLink="/questionnaire">
         <mat-icon>refresh</mat-icon>
       </button>
     </div>
-  </div>
+
+</div>
