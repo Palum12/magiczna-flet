@@ -9,3 +9,21 @@
     min-height: initial;
     max-height: initial;
 }
+
+.summary {
+   .image {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+}
+
+.logo-container {
+    background-image:
+        linear-gradient(rgba(255,255,255,0),
+        rgba(255,255,255,0)),
+        url("/assets/background.png");
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
