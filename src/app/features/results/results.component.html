@@ -7,7 +7,8 @@
   <div *ngIf="!isLoading">
     <div class="parent flex flex-col justify-center items-center gap-2">
       <div class="card mb-3">
-        <div class="text-lg">Krótkie podsumowanie od sztucznej inteligencji</div>
+        <div class="text-lg">Krótkie podsumowanie od sztucznej inteligencji 🥳🎉</div>
+        <img width="400" class="py-5" src="/assets/final.png" alt="">
         <div class="text-base">
           {{result.expertDescription}}
         </div>
@@ -37,7 +38,7 @@
       <div class="accent flex flex-col items-center">
         <div class="color-contrast text-center text-base mt-3">Wyniki są niezadowalające? Spróbuj ponownie.</div>
         <button mat-fab color="primary" class="m-2" routerLink="/questionnaire">
-          <mat-icon>arrow_backward</mat-icon>
+          <mat-icon>refresh</mat-icon>
         </button>
       </div>
 
