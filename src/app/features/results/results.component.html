@@ -37,8 +37,10 @@
           <div class="text-base">
             <div *ngFor="let proposal of result.fieldOfStudyProposals" class="mb-8">
               <div class="flex flex-row text-left mb-2">
-                <div class="font-bold">{{proposal.name}} - </div>
-                <div class="pl-1 font-bold">{{proposal.percentageMatch}}%</div>
+                <div class="font-bold">{{proposal.name}}</div>
+                <div *ngIf="proposal.percentageMatch != null && proposal.percentageMatch > 0">
+                  <div class="pl-1 font-bold"> - {{proposal.percentageMatch}}%</div>
+                </div>
               </div>
               <div *ngFor="let institution of proposal.managingInstitutions">
                 <div class="flex flex-row text-left">
